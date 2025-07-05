@@ -31,3 +31,8 @@ class Ship:
     def draw(self):
         """绘制飞船"""
         self.game.screen.blit(self.image, self.rect)
+
+    def center_ship(self):
+        """将飞船放在屏幕底部中央"""
+        self.rect.midbottom = self.game.screen.get_rect().midbottom
+        self.x = float(self.rect.x)
